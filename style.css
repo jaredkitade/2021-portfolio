@@ -103,16 +103,16 @@
 		padding: 25px 0px;
 		top: -108px;
 	}
-	.show-nav {
-		top: 0px;
-		background: blue;
-		transition: .2s ease;
-	}
 	.logo-small {
 
 	}
 	.sitemap-q {
 
+	}
+	.show-nav {
+		top: 0px;
+		background: blue;
+		transition: .2s ease;
 	}
 
 /*-------------------------------- HOME PAGE INTRO --------------------------------*/
