@@ -103,7 +103,7 @@
 		padding: 25px 0px;
 		top: -108px;
 	}
-	.reveal {
+	.show-nav {
 		top: 0px;
 		background: blue;
 		transition: .2s ease;
