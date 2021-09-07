@@ -1,12 +1,24 @@
-$(window).scroll(function(){
+// $(window).scroll(function(){
 
+//     var scroll = $(window).scrollTop();
+
+//     if (scroll >= 300) {
+//         $('.nav-bar').addClass('reveal');
+//     }
+//     else {
+//         $('.nav-bar').removeClass('reveal');
+//     }
+
+//  });
+
+$(window).scroll(function(){
     var scroll = $(window).scrollTop();
 
-    if (scroll >= 300) {
+    if (scroll >= 200) {
         $('.nav-bar').addClass('reveal');
     }
-    else {
-        $('.nav-bar').removeClass('reveal');
-    }
+    // else {
+    //  $('.scroll-wrap').removeClass('scroll-fade');
+    // }
 
- });
+});
