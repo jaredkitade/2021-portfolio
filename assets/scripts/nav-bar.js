@@ -1,16 +1,12 @@
-$(document).ready(function(){
+$(window).scroll(function(){
 
-    $(window).scroll(function(){
-        
-        var scroll = $(window).scrollTop();
+    var scroll = $(window).scrollTop();
 
-        if (scroll >= 300) {
-            $('.nav-bar').addClass('reveal');
-        }
-        else {
-            $('.nav-bar').removeClass('reveal');
-        }
+    if (scroll >= 300) {
+        $('.nav-bar').addClass('reveal');
+    }
+    else {
+        $('.nav-bar').removeClass('reveal');
+    }
 
-    });
-
-});
+ });
