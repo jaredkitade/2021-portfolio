@@ -8,8 +8,8 @@ $(function(){
         if(scroll > os + ht){
             $('.nav-bar').toggleClass('reveal');
         }
-        if(scroll < os + ht){
-            $('.nav-bar').toggleClass('reveal');
-        }
+        // if(scroll < os + ht){
+        //     $('.nav-bar').toggleClass('reveal');
+        // }
     });
 });
