@@ -1,0 +1,240 @@
+/*-------------------------------- FONTS --------------------------------*/
+
+	@font-face {
+		font-family: Eksell-Sans;
+		src: url(assets/fonts/eksell/EksellSans-Regular.woff);
+	}
+	@font-face {
+		font-family: Graphik-Regular;
+		src: url(assets/fonts/graphik/Graphik-Regular.otf);
+	}
+	@font-face {
+		font-family: Graphik-Regular-Italic;
+		src: url(assets/fonts/graphik/Graphik-RegularItalic.otf);
+	}
+	@font-face {
+		font-family: Graphik-Light;
+		src: url(assets/fonts/graphik/Graphik-Light.otf);
+	}
+	@font-face {
+		font-family: Graphik-Light-Italic;
+		src: url(assets/fonts/graphik/Graphik-LightItalic.otf);
+	}
+	@font-face {
+		font-family: Graphik-Bold;
+		src: url(assets/fonts/graphik/Graphik-Bold.otf);
+	}
+	@font-face {
+		font-family: Graphik-Semibold;
+		src: url(assets/fonts/graphik/Graphik-Semibold.otf);
+	}
+	
+
+/*-------------------------------- FULL PAGE --------------------------------*/
+
+
+	* {
+		box-sizing:border-box;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	}
+	html {
+		font-size: 62.5%;
+	}
+	body {
+		color: white;
+		background: black;
+		/*font-size: 2.4rem;
+		font-size: 24px;*/
+		font-family: Graphik-Light;
+		/*font-family: Graphik-Regular;*/
+		font-size: 18px;
+		font-size: 1.8rem;
+		margin: 0px 200px;
+	}
+	a {
+		cursor: pointer !important;
+		color: inherit;
+		text-decoration: underline;
+	}
+	p {
+		margin-top: 0;
+	}
+	img {
+		margin: 0;
+	}
+
+
+/*-------------------------------- HEADINGS --------------------------------*/
+
+
+	h1 {
+		font-family: Eksell-Sans;
+		font-size: 120px;
+		font-size: 12rem;
+		font-weight: normal;
+		margin: 0;
+	}
+	h2 {
+		font-family: Graphik-Semibold;
+		font-size: 24px;
+		font-size: 2.4rem;
+		font-weight: normal;
+		margin: 0 0 5px 0;
+	}
+	h3 {
+		/*font-family: Graphik-Regular-Italic;*/
+		font-family: Graphik-Light-Italic;
+		font-size: 24px;
+		font-size: 2.4rem;
+		font-weight: normal;
+		margin: 0;
+	}
+
+/*-------------------------------- NAV BAR --------------------------------*/
+
+	.nav-bar {
+		width: calc(100% - 400px);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: fixed;
+		z-index: 100;
+		background: black;
+		padding: 25px 0px;
+		top: -108px;
+	}
+	.reveal {
+		top: 0px;
+		background: red;
+		transition: .2s ease;
+	}
+	.logo-small {
+
+	}
+	.sitemap-q {
+
+	}
+
+/*-------------------------------- HOME PAGE INTRO --------------------------------*/
+	
+	.logo-large {
+		margin: 50px 0;
+	}
+	.about-intro {
+		width: 50%;
+		line-height: 2.6rem;
+	}
+
+/*-------------------------------- GRADIENT TEXT --------------------------------*/
+
+
+	.gradient-text {
+		background-image: url(assets/images/gradient-background.jpg);
+		background-size: 200% 200%;
+		animation: gradient 15s ease-in-out infinite;
+		background-clip: text;
+		-webkit-background-clip:text;
+		display:inline-block;
+		transition: color .2s ease-out, transform 1s ease;
+		/*text-transform:uppercase;*/
+	}
+	@keyframes gradient { 
+		0%{background-position:10% 30%}
+		10%{background-position:50% 10%}
+		20%{background-position:30% 70%}
+		30%{background-position:70% 20%}
+		40%{background-position:90% 62%}
+		50%{background-position:15% 20%}
+		60%{background-position:60% 80%}
+		70%{background-position:45% 18%}
+		80%{background-position:22% 65%}
+		90%{background-position:50% 45%}	
+		100%{background-position:10% 30%}
+	}
+/*-------------------------------- HOME PAGE PROJECT GRID --------------------------------*/
+	.project-grid {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: center;
+		margin-bottom: 100px;
+		max-width: 100%;
+	}
+	
+	.featured-project {
+		display: block;
+		width: auto;
+		min-width: 200px;
+		max-width: inherit;
+	}
+	.featured-project-image-container {
+		background-image: url(assets/images/gradient-background.jpg);
+		animation: gradient 20s ease-in-out infinite;
+		height: auto;
+		max-width: inherit;
+		margin-bottom: 20px;
+	}
+	.featured-project-image {
+		transition: .5s ease;
+		max-width: inherit;
+	}
+	.featured-project-image img {
+		display: block;
+		width: auto;
+		max-width: inherit;
+	}
+	.featured-project:hover .featured-project-image {
+		transform: translate(-20px,-20px);
+		transition: .5s ease;
+	}
+	.feature-one, .feature-four {
+		flex: 3 3 50%;
+	}
+	.feature-two, .feature-three {
+		flex: 2 2 37.5%;
+	}
+	.featured-spacer {
+		flex: 1 1 12.5%;
+	}
+
+
+
+/*-------------------------------- HOME PAGE PROJECT ROWS --------------------------------*/
+	/*.full-width-project-row {
+		position: relative;
+	}*/
+	.project-row {
+		display: flex;
+		flex-direction: row;
+		margin: 0 auto;
+		border-top: 1px solid white;
+		/*padding: 30px 150px 45px 150px;*/
+		padding: 30px 250px 45px 0px;
+	}
+	.project-row:last-child {
+		border-bottom: 1px solid white;
+		margin-bottom: 100px;
+	}
+	.project-row:hover .gradient-text {
+		color:rgba(0,0,0,0);
+		/*margin-left: 50px;*/
+		transform: translate(50px,0px);
+		transition: .5s ease;
+	}
+	.project-row:hover .project-row-arrow-container {
+		background-color: red;
+		transition: .5s ease;
+	}
+	.project-row-arrow-container {
+		width: 250px;
+		min-height: 100%;
+		margin: 0;
+		display: inline-block;
+		background-color: blue;
+	}
+	.project-row-title {
+		display: inline-block;
+	}
+
+
