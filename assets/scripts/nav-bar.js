@@ -27,10 +27,10 @@ $(document).ready(function(){
     // });
 
     if ($(window).scrollTop() > 300){
-        $('.nav-bar').addClass( "show-nav");
+        $(".nav-bar").addClass( "show-nav");
     }
     else {
-        $('.nav-bar').removeClass("show-nav");
+        $(".nav-bar").removeClass("show-nav");
     }
 
 
