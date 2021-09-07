@@ -105,7 +105,7 @@
 	}
 	.reveal {
 		top: 0px;
-		background: red;
+		background: blue;
 		transition: .2s ease;
 	}
 	.logo-small {
