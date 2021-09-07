@@ -51,6 +51,10 @@
 		font-size: 1.8rem;
 		margin: 0px 200px;
 	}
+	.page-content-wrapper {
+		max-width: 1680px;
+		margin: 0 auto;
+	}
 	a {
 		cursor: pointer !important;
 		color: inherit;
@@ -104,9 +108,11 @@
 		background: black;
 		padding: 25px 200px;
 		top: -109px;
-		left: 0;
+		left: 50%;
+		transform: translatex(-50%);
 		transition: .5s ease;
-		/*border-bottom: 1px solid white;*/
+		max-width: calc(1680px + 400px);
+		/*margin: 0 auto;*/
 	}
 	.logo-small {
 
