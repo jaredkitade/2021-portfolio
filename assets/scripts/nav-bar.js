@@ -9,6 +9,6 @@
 
 $(document).ready(function () {
     $(window).scroll(function () {
-        $(".nav-bar").toggleClass("show-nav", ($(window).scrollTop() > 100));
+        $(".nav-bar").toggleClass("show-nav", ($(window).scrollTop() > 250));
      });
 });

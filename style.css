@@ -55,6 +55,7 @@
 		cursor: pointer !important;
 		color: inherit;
 		text-decoration: underline;
+		text-decoration: none;
 	}
 	p {
 		margin-top: 0;
@@ -94,14 +95,18 @@
 
 	.nav-bar {
 		width: calc(100% - 400px);
+		width: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		position: fixed;
 		z-index: 100;
 		background: black;
-		padding: 25px 0px;
-		top: -108px;
+		padding: 25px 200px;
+		top: -109px;
+		left: 0;
+		transition: .5s ease;
+		/*border-bottom: 1px solid white;*/
 	}
 	.logo-small {
 
@@ -111,8 +116,8 @@
 	}
 	.show-nav {
 		top: 0px;
-		background: blue;
-		transition: .2s ease;
+		/*background: blue;*/
+		transition: .5s ease;
 	}
 
 /*-------------------------------- HOME PAGE INTRO --------------------------------*/
@@ -123,6 +128,13 @@
 	.about-intro {
 		width: 50%;
 		line-height: 2.6rem;
+	}
+	.intro-text-link {
+		font-family: Graphik-Semibold;
+	}
+	.intro-text-link:hover {
+		color:rgba(0,0,0,0);
+		transition: .5s ease;
 	}
 
 /*-------------------------------- GRADIENT TEXT --------------------------------*/
@@ -158,6 +170,7 @@
 		justify-content: space-between;
 		flex-wrap: wrap;
 		align-items: center;
+		/*margin: 0px 20px 100px 20px;*/
 		margin-bottom: 100px;
 		max-width: 100%;
 	}
