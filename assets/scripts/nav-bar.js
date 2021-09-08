@@ -14,4 +14,5 @@ $(document).ready(function () {
     $('.sitemap-q').click(function() {
         $(".sitemap").toggleClass("show-sitemap");
     });
+    
 });
