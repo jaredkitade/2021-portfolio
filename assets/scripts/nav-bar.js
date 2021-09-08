@@ -5,14 +5,11 @@ $(document).ready(function () {
 
     $(function(){
         $("#nav-placeholder").load("nav.html");
-    });
-
-    $(function(){
         $("#sitemap-placeholder").load("sitemap.html");
     });
 
-    $('.sitemap-q').click(function() {
+    $(".sitemap-q").click(function(){
         $(".sitemap").toggleClass("show-sitemap");
     });
-    
+
 });
