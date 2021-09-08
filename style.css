@@ -162,6 +162,7 @@
 		left: 50%;
 		top: 0;
 		transform: translatex(-50%);
+		cursor: pointer;
 	}
 
 
