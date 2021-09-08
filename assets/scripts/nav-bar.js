@@ -10,4 +10,8 @@ $(document).ready(function () {
     $(function(){
         $("#sitemap-placeholder").load("sitemap.html");
     });
+
+    $('.sitemap-p').click(function() {
+        $(".sitemap").toggleClass("show-sitemap");
+    });
 });
