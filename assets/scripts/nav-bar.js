@@ -11,7 +11,7 @@ $(document).ready(function () {
         $("#sitemap-placeholder").load("sitemap.html");
     });
 
-    $('.sitemap-p').click(function() {
+    $('.sitemap-q').click(function() {
         $(".sitemap").toggleClass("show-sitemap");
     });
 });
