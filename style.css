@@ -236,7 +236,7 @@
 		top: -340px;
 	}
 	.about-intro {
-		width: 50%;
+		width: 40%;
 		line-height: 2.6rem;
 	}
 	.intro-text-link {
@@ -270,7 +270,14 @@
 		padding: 50px 100px;
 	}
 	.footer-logo {
-		flex: 1 1 25%;
+		/*flex: 1 1 25%;*/
+		height: 150px;
+		text-align: left;
+		width: auto;
+	}
+	.footer-contact {
+		/*flex: 1 1 25%;*/
+
 	}
 /*-------------------------------- GRADIENT TEXT --------------------------------*/
 
@@ -339,13 +346,13 @@
 		transition: .5s ease;
 	}
 	.feature-one, .feature-four {
-		flex: 3 3 50%;
+		flex: 3 3 45%;
 	}
 	.feature-two, .feature-three {
-		flex: 2 2 37.5%;
+		flex: 2 2 35%;
 	}
 	.featured-spacer {
-		flex: 1 1 12.5%;
+		flex: 1 1 20%;
 	}
 
 /*-------------------------------- HOME PAGE PROJECT ROWS --------------------------------*/
