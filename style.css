@@ -168,8 +168,8 @@
 	}
 	.sitemap-q-container {
 		position: fixed;
-		/*width: calc(100% - 400px);*/
-		width: 100%;
+		width: calc(100% - 400px);
+		/*width: 100%;*/
 		padding: 50px 0px;
 		top: 0;
 		/*left: 50%;
