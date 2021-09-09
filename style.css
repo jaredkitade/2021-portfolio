@@ -70,7 +70,7 @@
 	}
 	.page-content {
 		max-width: 1680px;
-		padding: 0px 200px;
+		padding: 0px 100px;
 		margin: 0 auto;
 		/*background: black;*/
 	}
@@ -150,7 +150,7 @@
 		justify-content: space-between;
 		align-items: flex-start;
 		flex-wrap: wrap;
-		padding: 50px 200px;
+		padding: 50px 100px;
 		max-width: 1680px;
 		margin: 0 auto;
 	}
@@ -168,14 +168,14 @@
 	}
 	.sitemap-q-container {
 		position: fixed;
-		width: calc(100% - 400px);
+		width: calc(100% - 200px);
 		/*width: 100%;*/
 		padding: 50px 0px;
 		top: 0;
 		/*left: 50%;
 		transform: translatex(-50%);*/
 		/*max-width: calc(1680px);*/
-		max-width: calc(1680px - 400px);
+		max-width: calc(1680px - 200px);
 		z-index: 3;
 	}
 	.sitemap-q {
@@ -267,7 +267,7 @@
 		justify-content: space-between;
 		max-width: 1680px;
 		margin: 0 auto;
-		padding: 50px 200px;
+		padding: 50px 100px;
 	}
 	.footer-logo {
 		flex: 1 1 25%;
