@@ -10,54 +10,79 @@ $(document).ready(function () {
         $("#footer-placeholder").load("footer.html");
     });
 
-    $(".sitemap-q").click(function(){
+    // $(".sitemap-q").click(function(){
+    //     $(".sitemap-container").toggleClass("show-sitemap");
+    //     $(".nav-bar").toggleClass("logo-behind");
+    // });
+
+    $(".question").click(function(){
         $(".sitemap-container").toggleClass("show-sitemap");
         $(".nav-bar").toggleClass("logo-behind");
     });
 
-    var $cursor = $('.cursor');
+    var cursor = $(".cursor");
 
-    function moveCursor(e) {
-        $cursor.css({"top": e.pageY, "left": e.pageX});
-    }
+    $(window).mousemove(function(e) {
+        cursor.css({
+            top: e.clientY - cursor.height() / 2,
+            left: e.clientX - cursor.width() / 2
+        });
+    });
 
-    $(window).on('mousemove', moveCursor);
-
-    $(document).mousemove(function(e) {
-
-        const cursor = $('.cursor');
-        const target = $(event.target);
-
-        // update position of cursor
-        cursor.css('left', e.clientX-10).css('top', e.clientY-10);
-
-        const isLinkTag = target.is('a');
-        const isHovered = cursor.hasClass('cursor-hover');
-
-        // toggle the cursor class if necessary 
-        if(isLinkTag && !isHovered) {
-
-        cursor.addClass('cursor-hover');
-
-        } else if(!isLinkTag && isHovered) {
-
-        cursor.removeClass('cursor-hover');
-
-        }
-
+    $(window)
+        .mouseleave(function() {
+            cursor.css({
+                opacity: "0"
+            });
+        })
+        .mouseenter(function() {
+            cursor.css({
+                opacity: "1"
+            });
         });
 
-        $(document).mouseleave(function(e) {
-
-        const cursor = $('.cursor');
-        cursor.hide()
-
+    $(".link")
+        .mouseenter(function() {
+            cursor.css({
+                transform: "scale(3.2)"
+            });
+        })
+        .mouseleave(function() {
+            cursor.css({
+                transform: "scale(1)"
+            });
         });
 
-        $(document).mouseenter(function(e) {
-
-        const cursor = $('.cursor');
-        cursor.show()
-
+    $(window)
+        .mousedown(function() {
+            cursor.css({
+                transform: "scale(.2)"
+            });
+        })
+        .mouseup(function() {
+            cursor.css({
+                transform: "scale(1)"
+            });
         });
-});
+
+    // var mouseX, mouseY;
+    //     $(document).mousemove(function(event) {
+    //         mouseX = event.pageX;
+    //         mouseY = event.pageY;
+    //         $(".arrow").each(function(){
+    //             var angle, arrowPos, arrowWidth, arrowHeight, arrowOriginX, arrowOriginY;
+    //             arrowPos = $(this).position();
+    //             arrowWidth = $(this).width();
+    //             arrowHeight = $(this).height();
+    //             arrowOriginX = arrowWidth/2 + arrowPos.left;
+    //             arrowOriginY = arrowHeight/2 + arrowPos.top;
+
+    //             angle = Math.atan2(mouseY - arrowOriginY, mouseX - arrowOriginX);
+    //             // console.log("x=" + mouseX + " y=" + mouseY + " angle=" + angle);
+    //             $(this).css({'-webkit-transform' : 'rotate('+ angle +'rad)',
+    //                             '-moz-transform' : 'rotate('+ angle +'rad)',
+    //                             '-ms-transform' : 'rotate('+ angle +'rad)',
+    //                             'transform' : 'rotate('+ angle +'rad)'});
+    //         })
+    //     }).mouseover();
+    });
