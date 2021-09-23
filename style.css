@@ -75,6 +75,7 @@
 		padding: 0px 100px 100px 100px;
 		margin: 0 auto;
 		margin-bottom: 250px;
+		position: relative;
 		/*background: black;*/
 	}
 	a {
@@ -111,19 +112,6 @@
 		z-index: 999;
 		transition: transform 0.2s;
 	}
-	.cursor-hover {
-		animation: cursor-animation 2s ease infinite;
-		background: white;
-	}
-
-	@keyframes cursor-animation {
-		0% {transform: scale(1);}
-		/*50% {transform: scale(.75);}*/
-		50% {transform: scale(1.75);}
-		/*90% {transform: scale(1.0);}*/
-		/*100% {transform: scale(1.0);}*/
-	}
-
 
 /*-------------------------------- HEADINGS --------------------------------*/
 
@@ -198,15 +186,18 @@
 	.sitemap-q-container {
 		position: fixed;
 		width: calc(100% - 200px);
-		padding: 50px 0px;
+		/*padding: 50px 0px;*/
+		margin-top: 50px;
 		top: 0;
 		max-width: calc(1680px - 200px);
 		z-index: 3;
+		mix-blend-mode: difference;
 	}
 	.sitemap-q {
 		position: absolute;
 		/*cursor: pointer;*/
 		right: 0;
+		top: -10px;
 		text-align: right;
 		height: 40px;
 	}
@@ -239,20 +230,21 @@
 		z-index: 3;
 		/*background: black;*/
 		/*padding: 50px 200px;*/
-		padding: 50px 0px;
+		/*padding: 50px 0px;*/
+		margin-top: 50px;
 		top: -109px;
 		/*left: 50%;
 		transform: translatex(-50%);*/
 		transition: .5s ease;
 		/*max-width: calc(1680px + 400px);*/
 		/*margin: 0 auto;*/
+		mix-blend-mode: difference;
 	}
 	.logo-small {
 		height: 40px;
 	}
 	.show-nav {
 		top: 0px !important;
-		/*background: blue;*/
 		transition: .5s ease;
 	}
 	.logo-behind {
@@ -260,6 +252,65 @@
 		transition: .5s ease;
 	}
 
+/*-------------------------------- COLOR FLIP --------------------------------*/
+	
+	.color-flip-container {
+		position: fixed;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100px;
+	    /*width: calc(100% - 200px);*/
+	    /*padding: 50px 0px;*/
+	    /*bottom: 0;*/
+	    /*max-width: calc(1680px - 200px);*/
+	    left: 50%;
+	    top: 65px;
+	    transform: translateX(-50%);
+	    z-index: 3;
+	    mix-blend-mode: difference;
+	}
+	.color-flip {
+		/*position: absolute;
+		right: 0;
+		text-align: right;
+		height: auto;*/
+		width: 15px;
+		height: 15px;
+		/*background: red;*/
+		/*opacity: .5;*/
+		transform: scale(1);
+		border-radius: 100%;
+		transition: .5s ease;
+	}
+	.color-flip:hover {
+		transform: scale(.5);
+		transition: .5s ease;
+	}
+	#black {
+		background: black;
+		border: 1px solid white;
+	}
+	#white {
+		background: white;
+		border: 1px solid black;
+	}
+	#color {
+		background-image: url(assets/images/gradient-background.jpg);
+		background-size: 200%;
+	}
+	.active {
+		transform: scale(1.25);
+	}
+	.right-arrows {
+		/*mix-blend-mode: difference;*/
+		animation: spin 20s linear infinite;
+		/*color: white;*/
+	}
+	@keyframes spin {
+		0% { transform: rotate(0deg); }
+		100% { transform: rotate(360deg); }
+	}
 /*-------------------------------- HOME PAGE INTRO --------------------------------*/
 	
 	/*.logo-large-container {
@@ -446,10 +497,155 @@
 	.project-row-title {
 		display: flex;
 		flex-wrap: wrap;
+		overflow: hidden;
 	}
+	/*.project-row-title > h1 {
+		transform: translateY(150px);
+		transition: .5s ease;
+	}
+	.project-row-title > h3 {
+		transform: translateY(30px);
+		transition: .5s ease;
+	}
+	.heading-animation {
+		animation: wipe-in .5s 1;
+	}
+	@keyframes wipe-in {
+		100% {transform: translateY(0px);}
+	}*/
+
 	.project-row-title > * {
 		/*flex: 1 1 100%;*/
 		flex-basis: 100%;
 	}
 
 
+/*-------------------------------- MOBILE --------------------------------*/
+	
+	/*--- PHONE ---*/
+
+		@media (max-width: 450px) {
+
+			/*--- FULL HTML ---*/
+				
+				.page-content {
+					padding: 0px 25px 100px 25px;
+					margin: 0 auto;
+					margin-bottom: 250px;
+				}
+
+			/*--- HEADINGS ---*/
+				
+				h1 {
+					font-size: 52px;
+					font-size: 5.2rem;
+				}
+				h2 {
+					font-size: 24px;
+					font-size: 2.4rem;
+				}
+				h3 {
+					font-size: 18px;
+					font-size: 1.8rem;
+					line-height: 2.5rem;
+				}
+	
+			/*--- SITEMAP ---*/
+
+				.sitemap-q-container {
+					right: 25px;
+					margin-top: 25px;
+				}
+
+			/*--- NAV BAR ---*/
+
+				.nav-bar {
+					margin-top: 25px;
+					/*background: black;
+					width: 100%;*/
+				}
+
+			/*--- COLOR FLIP ---*/
+
+				.color-flip-container {
+					display: none;
+				}
+
+			/*--- HOME PAGE INTRO ---*/
+
+				.about-intro {
+					width: 100%;
+					margin-bottom: 75px;
+				}
+				.logo-large {
+					margin-top: 25px;
+				}
+				.logo-large img {
+					height: 140px;
+				}
+
+			/*--- FOOTER ---*/
+
+				.a {
+					width: 100%;
+				}
+
+			/*--- GRADIENT TEXT ---*/
+
+				.a {
+					width: 100%;
+				}
+
+			/*--- HOME PAGE PROJECT GRID ---*/
+
+				.project-grid {
+					flex-direction: column;
+				}
+				.feature-one {
+					order: 1;
+				}
+				.feature-two {
+					order: 2;
+					margin: 0px 30px;
+				}
+				.feature-three {
+					order: 4;
+					margin: 0px 30px;
+				}
+				.feature-four {
+					order: 3;
+				}
+				.featured-project {
+					margin-bottom: 75px;
+				}
+				.featured-project:nth-child(4) {
+					margin-bottom: 0px;
+				}
+
+			/*--- HOME PAGE PROJECT ROWS ---*/
+
+				.project-row-arrow-container {
+					display: none;
+				}
+				.project-row {
+					padding: 15px 5px 25px 5px;
+				}
+
+			/*--- PHONE ---*/
+
+				.a {
+					width: 100%;
+				}
+
+			/*--- PHONE ---*/
+
+				.a {
+					width: 100%;
+				}
+
+			/*--- PHONE ---*/
+
+				.a {
+					width: 100%;
+				}
+		}

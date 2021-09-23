@@ -2,12 +2,15 @@ $(document).ready(function () {
     $(window).scroll(function () {
         $(".nav-bar").toggleClass("show-nav", ($(window).scrollTop() > 150));
         $(".logo-large").toggleClass("show-nav", ($(window).scrollTop() < 150));
+        $(".sitemap-q-container").toggleClass("q-padding", ($(window).scrollTop() > 0));
      });
 
     $(function(){
         $("#nav-placeholder").load("nav.html");
+        $("#q-placeholder").load("q.html");
         $("#sitemap-placeholder").load("sitemap.html");
         $("#footer-placeholder").load("footer.html");
+        $("#color-flip-placeholder").load("color-flip.html");
     });
 
     // $(".sitemap-q").click(function(){
@@ -64,25 +67,19 @@ $(document).ready(function () {
                 transform: "scale(1)"
             });
         });
+        // const observer = new IntersectionObserver(entries => {
+        //     entries.forEach(entry => {
+        //         const heading = entry.target.querySelector(".heading");
 
-    // var mouseX, mouseY;
-    //     $(document).mousemove(function(event) {
-    //         mouseX = event.pageX;
-    //         mouseY = event.pageY;
-    //         $(".arrow").each(function(){
-    //             var angle, arrowPos, arrowWidth, arrowHeight, arrowOriginX, arrowOriginY;
-    //             arrowPos = $(this).position();
-    //             arrowWidth = $(this).width();
-    //             arrowHeight = $(this).height();
-    //             arrowOriginX = arrowWidth/2 + arrowPos.left;
-    //             arrowOriginY = arrowHeight/2 + arrowPos.top;
+        //         if (entry.isIntersecting) {
+        //             entry.target.classList.add(".heading-animation");
+        //             return;
+        //         }
 
-    //             angle = Math.atan2(mouseY - arrowOriginY, mouseX - arrowOriginX);
-    //             // console.log("x=" + mouseX + " y=" + mouseY + " angle=" + angle);
-    //             $(this).css({'-webkit-transform' : 'rotate('+ angle +'rad)',
-    //                             '-moz-transform' : 'rotate('+ angle +'rad)',
-    //                             '-ms-transform' : 'rotate('+ angle +'rad)',
-    //                             'transform' : 'rotate('+ angle +'rad)'});
-    //         })
-    //     }).mouseover();
+        //         heading.classList.remove(".heading-animation")
+        //     });
+        // });
+
+        // observer.observe(document.querySelector(".heading-wrapper"));
+        
     });
