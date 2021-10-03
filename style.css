@@ -71,7 +71,7 @@
 		background: black;
 	}
 	.page-content {
-		max-width: 1680px;
+		max-width: 2500px;
 		padding: 0px 100px 100px 100px;
 		margin: 0 auto;
 		margin-bottom: 250px;
@@ -189,7 +189,7 @@
 		/*padding: 50px 0px;*/
 		margin-top: 50px;
 		top: 0;
-		max-width: calc(1680px - 200px);
+		max-width: calc(2500px - 200px);
 		z-index: 3;
 		mix-blend-mode: difference;
 	}
@@ -377,10 +377,8 @@
 		-webkit-animation: gradient 15s ease-in-out infinite;
 		-moz-animation: gradient 15s ease-in-out infinite;
 		background-clip: text;
-		-webkit-background-clip:text;
-		/*display:inline-block;*/
+		-webkit-background-clip: text;
 		transition: color .2s ease-out, transform 1s ease;
-		/*text-transform:uppercase;*/
 	}
 	@keyframes gradient { 
 		0%{background-position:10% 30%}
